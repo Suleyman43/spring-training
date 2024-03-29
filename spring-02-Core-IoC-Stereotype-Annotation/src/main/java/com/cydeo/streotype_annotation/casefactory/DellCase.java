@@ -6,6 +6,7 @@ import org.springframework.stereotype.Component;
 public class DellCase extends Case  {
 
     public DellCase() {
+
         super("2208","Dell","240");
     }
 
