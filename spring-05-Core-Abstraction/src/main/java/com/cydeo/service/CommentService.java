@@ -4,6 +4,7 @@ import com.cydeo.proxy.CommentNotificationProxy;
 import com.cydeo.respository.CommentRepository;
 import com.cydeo.respository.DBCommentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 import javax.xml.stream.events.Comment;
@@ -15,7 +16,8 @@ public class CommentService {
     //  @Autowired     constructor olusturunca buna gerek yok
     private final CommentNotificationProxy commentNotificationProxy;
 
-    public CommentService(CommentRepository commentRepository, CommentNotificationProxy commentNotificationProxy) {
+                                                                           //default bean name
+    public CommentService(CommentRepository commentRepository,@Qualifier("EMAIL") CommentNotificationProxy commentNotificationProxy) {
         this.commentRepository = commentRepository;
         this.commentNotificationProxy = commentNotificationProxy;
     }

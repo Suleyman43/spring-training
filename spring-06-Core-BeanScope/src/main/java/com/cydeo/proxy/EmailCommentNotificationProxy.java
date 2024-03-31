@@ -1,12 +1,14 @@
 package com.cydeo.proxy;
 
-import com.cydeo.model.Comment;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
+import javax.xml.stream.events.Comment;
+
 @Component
 @Qualifier("EMAIL")
-public class EmailCommentNotificationProxy implements CommentNotificationProxy {
+public class EmailCommentNotificationProxy implements CommentNotificationProxy{
+
 
     @Override
     public void sendComment(Comment comment) {

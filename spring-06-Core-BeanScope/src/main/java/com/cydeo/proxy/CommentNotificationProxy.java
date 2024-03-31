@@ -1,7 +1,8 @@
 package com.cydeo.proxy;
 
-import com.cydeo.model.Comment;
+import javax.xml.stream.events.Comment;
 
 public interface CommentNotificationProxy {
+
     void sendComment(Comment comment);
 }

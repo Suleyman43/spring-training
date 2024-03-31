@@ -1,6 +1,6 @@
-package com.cydeo.repository;
+package com.cydeo.respository;
 
-import com.cydeo.model.Comment;
+import javax.xml.stream.events.Comment;
 
 public interface CommentRepository {
     void storeComment(Comment comment);
