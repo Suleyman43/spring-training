@@ -15,11 +15,15 @@ public class CydeoApplication {
         comment.setAuthor("Johnson");
         comment.setText("Spring Framework");
 
-
         ApplicationContext container = SpringApplication.run(CydeoApplication.class, args);
 
         CommentService commentService = container.getBean(CommentService.class);
         commentService.publishComment(comment);
+
+        commentService.printConfigData();
+        commentService.printDbConfigData();
     }
+
+
 
 }
