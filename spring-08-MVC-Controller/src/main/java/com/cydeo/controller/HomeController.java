@@ -26,5 +26,11 @@ public class HomeController {
         return "home.html";
     }
 
+    @RequestMapping("/alone")
+    public  String alone(){
+
+        return "home.html";
+    }
+
 
 }

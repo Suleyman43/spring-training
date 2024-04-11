@@ -13,17 +13,32 @@ import java.util.Random;
 @Controller
 public class StudentController {
 
-    @RequestMapping("/welcome")
-    public String homePage(Model model){
 
-        model.addAttribute("name","Cydeo");
-        model.addAttribute("course","MVC");
+
+@RequestMapping("/welcome")
+public String homePage(){
+
+    return "student/welcome";
+
+}
+
+    /*
+    @RequestMapping("/welcome")
+
+    public String homePage(Model model) {
+
+
+
+
+
+          model.addAttribute("name", "Cydeo");
+        model.addAttribute("course", "MVC");
 
         String subject = "Spring Boot";
-        model.addAttribute("subject",subject);
+        model.addAttribute("subject", subject);
 
         int studentId = new Random().nextInt();
-        model.addAttribute("id",studentId);
+        model.addAttribute("id", studentId);
 
         List<Integer> numbers = new ArrayList<>();
         numbers.add(4);
@@ -31,15 +46,20 @@ public class StudentController {
         numbers.add(6);
         numbers.add(7);
 
-        model.addAttribute("numbers",numbers);
+        model.addAttribute("numbers", numbers);
 
         LocalDate dt = LocalDate.now();
-        model.addAttribute("date",dt);
+        model.addAttribute("date", dt);
 
-        Student student = new Student(1,"Mike","Smith");
-        model.addAttribute("student",student);
+        Student student = new Student(1, "Mike", "Smith");
+        model.addAttribute("student", student);
 
 
         return "student/welcome";
     }
+         */
+
+
+
+
 }
