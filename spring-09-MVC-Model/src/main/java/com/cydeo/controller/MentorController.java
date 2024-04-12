@@ -16,13 +16,16 @@ public class MentorController {
     public String showTable(Model model) {
 
         List<Mentor> mentorList = new ArrayList<>();
+
         mentorList.add(new Mentor("Mike", "Smith", 45, Gender.MALE));
+
         mentorList.add(new Mentor("Tom", "Hanks", 65, Gender.MALE));
+
         mentorList.add(new Mentor("Ammy", "Bryan", 25, Gender.FEMALE));
 
         model.addAttribute("mentors", mentorList);
 
-        return "mentor/mentor-list";
+        return "mentor/mentor-list";        // view
 
     }
 }
