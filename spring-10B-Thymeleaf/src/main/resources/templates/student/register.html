@@ -27,7 +27,11 @@
     <a th:href="@{https://sozcu.com}">news</a>
 </h2>
 
+<!-- Adding parameter -->
 
+<h2>
+    <a th:href="@{/student/welcome(name=${students.get(0).firstName})}">Welcome</a>
+</h2>
 
 </body>
 </html>
